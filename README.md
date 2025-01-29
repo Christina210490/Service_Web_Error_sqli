@@ -1,7 +1,7 @@
 
 # Error SQL injection: Setup and Exploitation Guide
 
-This guide provides instructions to set up a vulnerable PHP web application, run it locally using Docker, and exploit SQL injection vulnerabilities to understand how such attacks work in real-world scenarios.
+This guide provides instructions to set up a vulnerable Flask (Python) web application, run it locally using Docker, and exploit SQL injection vulnerabilities to understand how such attacks work in real-world scenarios.
 ---
 
 ## Prerequisites

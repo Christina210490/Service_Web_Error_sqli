@@ -22,7 +22,7 @@ Install from docker.com if necessary.
 ### Step 1: Clone the Repository
 Clone this repository to your local machine:
 
-git clone https://github.com/christina210490/Error-SQLI.git
+git clone https://github.com/christina210490/Service_Web_Error_sqli.git
 cd Error-SQLI
 
 ### Step 2: Build and Run the Docker Containers

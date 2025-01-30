@@ -92,7 +92,7 @@ Result: SQL error: XPATH syntax error: ' testdb'
 
 This attack uses the UPDATEXML() function, which triggers an error when incorrect XML is processed. By injecting the DATABASE() function into the query, we retrieve the name of the current database, which is revealed as testdb.
 
-.................................
+---
 
 Attack 3: Retrieve the Number of Tables in the Database
 
@@ -112,7 +112,7 @@ Result: SQL error: XPATH syntax error: ' 3'
 
 This attack queries the information_schema.tables table, which stores metadata about all tables in the database. By injecting a subquery to count the number of tables in the testdb schema, the SQL error reveals that there are 3 tables.
 
-.................................
+---
 
 Attack 4: Retrieve Table Names
 
@@ -169,7 +169,7 @@ http://localhost:8081/user?id=1' AND EXTRACTVALUE(1, CONCAT(0x0a, (SELECT table_
 Result: SQL error: XPATH syntax error: ' users'
 ```
 
-.................................
+---
 
 Attack 5: Retrieve Column Information
 
@@ -221,7 +221,7 @@ SQL error: XPATH syntax error: ' name'
 
 Repeat for other columns: email, password.
 
-.................................
+---
 
 Attack 6: Retrieve User Data
 Retrieve rows from the users table:
@@ -242,7 +242,7 @@ This attack concatenates columns from the users table into a single output using
 
 Repeat for other rows to retrieve all user data.
 
-.................................
+---
 
 Attack 7: Extract All Passwords:
 
@@ -262,7 +262,7 @@ Result: password1password2password3.
 
 This attack concatenates all passwords from the users table using the GROUP_CONCAT() function. The SQL error reveals the passwords stored in the database: password1, password2, password3.
 
-.................................
+---
 
 Attack 8: Retrieve row by row of "orders" table:
 
@@ -282,7 +282,7 @@ Result: SQL error: XPATH syntax error: ' 1:1:Laptop:999.99'
 
 This attack retrieves rows from the orders table by concatenating the columns into a single string using the CONCAT() function. The SQL error reveals the first row of the table: order_id: 1, user_id: 1, product: Laptop, amount: 999.99.
 
------
+---
 
 # Impact
 

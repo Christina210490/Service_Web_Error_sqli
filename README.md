@@ -77,7 +77,7 @@ This attack leverages the EXTRACTVALUE() function to extract an XML value, which
 
 ---
 
-# Attack 2: Retrieve Database Name:
+# Attack 2: Retrieve Database Name
 
 **Query:**
 ```bash
@@ -94,7 +94,7 @@ This attack uses the UPDATEXML() function, which triggers an error when incorrec
 
 ---
 
-Attack 3: Retrieve the Number of Tables in the Database
+# Attack 3: Retrieve the Number of Tables in the Database
 
 **Query:**
 
@@ -114,7 +114,7 @@ This attack queries the information_schema.tables table, which stores metadata a
 
 ---
 
-Attack 4: Retrieve Table Names
+# Attack 4: Retrieve Table Names
 
 1. Retrieve all table names in one query:
 
@@ -171,7 +171,7 @@ Result: SQL error: XPATH syntax error: ' users'
 
 ---
 
-Attack 5: Retrieve Column Information
+# Attack 5: Retrieve Column Information
 
 1. Retrieve the number of columns in the users table:
 
@@ -223,7 +223,7 @@ Repeat for other columns: email, password.
 
 ---
 
-Attack 6: Retrieve User Data
+# Attack 6: Retrieve User Data
 Retrieve rows from the users table:
 
 **Query:**
@@ -244,7 +244,7 @@ Repeat for other rows to retrieve all user data.
 
 ---
 
-Attack 7: Extract All Passwords:
+# Attack 7: Extract All Passwords:
 
 **Query:**
 
@@ -264,7 +264,7 @@ This attack concatenates all passwords from the users table using the GROUP_CONC
 
 ---
 
-Attack 8: Retrieve row by row of "orders" table:
+# Attack 8: Retrieve row by row of "orders" table:
 
 **Query:**
 

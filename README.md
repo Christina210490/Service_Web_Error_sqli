@@ -2,6 +2,7 @@
 # Error SQL injection: Setup and Exploitation Guide
 
 This project demonstrates how a SQL Injection vulnerability can be exploited in a Flask (Python) web application using Docker containers to simulate real-world scenarios. The report covers the setup of the environment, the process of exploitation, and key takeaways for securing web applications.
+
 **Use this guide only in a controlled environment for educational purposes.**
 ---
 

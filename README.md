@@ -75,7 +75,7 @@ Result: SQL error: XPATH syntax error: ' 5.7.44'
 
 This attack leverages the EXTRACTVALUE() function to extract an XML value, which intentionally fails and causes an SQL error revealing the MySQL version. By injecting the @@version variable into the query, we retrieve the version of the running MySQL server, which in this case is 5.7.44.
 
-.................................
+---
 
 # Attack 2: Retrieve Database Name:
 

@@ -2,6 +2,7 @@
 # Error SQL injection: Setup and Exploitation Guide
 
 This project demonstrates how a SQL Injection vulnerability can be exploited in a Flask (Python) web application using Docker containers to simulate real-world scenarios. The report covers the setup of the environment, the process of exploitation, and key takeaways for securing web applications.
+**Use this guide only in a controlled environment for educational purposes.**
 ---
 
 ## Prerequisites
@@ -29,26 +30,28 @@ cd Service_Web_Error_sqli
  ```
 
 ### Step 2: Build and Run the Docker Containers
-1. Build the Docker Environment:
+1. **Build the Docker Environment**:
 
 ```bash
 docker-compose build
  ```
 
-2. Run the Docker Containers:
+2. **Run the Docker Containers**:
 
 ```bash
 docker-compose up -d
 ```
-3. Access the Application: Open your browser and navigate to:
+3. **Access the Application**:
+
+Open your browser and navigate to:
 
 ```bash
 http://localhost:8081
 ```
 
-4. Stop the Application: 
+4. **Stop the Application**: 
 
-Press Ctrl+C in the terminal running docker-compose or stop it with:
+Press `Ctrl+C` in the terminal running docker-compose or stop it with:
 
 ```bash
 docker-compose down
@@ -59,6 +62,7 @@ docker-compose down
 
 The web application was intentionally designed to have unsanitized user inputs, making it vulnerable to SQL injection attacks. Below are the detailed attack vectors executed:
 
+### Exploitation Steps
 
 # Attack 1: Retrieve MySQL Version
 
@@ -288,11 +292,14 @@ This attack retrieves rows from the orders table by concatenating the columns in
 
 This application demonstrates the critical risks of SQL injection vulnerabilities, including:
 
-1. Data Theft: Attackers can retrieve sensitive information like user credentials.
+1. **Data Theft**:
+Attackers can retrieve sensitive information like user credentials.
 
-2. Database Manipulation: Malicious queries can delete, modify, or insert data.
+2. **Database Manipulation**:
+Malicious queries can delete, modify, or insert data.
 
-3. System Exposure: Attackers can gain insights into system configurations.
+3. **System Exposure**:
+Attackers can gain insights into system configurations.
 
 ---
 
@@ -300,19 +307,19 @@ This application demonstrates the critical risks of SQL injection vulnerabilitie
 
 To prevent SQL injection:
 
-1. Use Prepared Statements:
+1. **Use Prepared Statements**:
 
-Avoid directly concatenating user inputs into SQL queries.
-Use parameterized queries.
+- Avoid directly concatenating user inputs into SQL queries.
+- Use parameterized queries.
 
-2.Input Validation:
+2.**Input Validation**:
 
-Validate and sanitize all user inputs.
-Reject unexpected or dangerous input patterns.
+- Validate and sanitize all user inputs.
+- Reject unexpected or dangerous input patterns.
 
-3. Least Privilege:
+3. **Least Privilege**:
 
-Restrict database permissions to limit the impact of an exploited vulnerability.
+- Restrict database permissions to limit the impact of an exploited vulnerability.
 
 ## Key Takeaways
 
@@ -322,6 +329,4 @@ Restrict database permissions to limit the impact of an exploited vulnerability.
 
 ---
 
-## Disclaimer: 
-
-This guide is intended for educational purposes in a controlled environment. Unauthorized testing or exploitation is illegal and may lead to legal consequences.
+**Disclaimer**: This guide is intended for educational purposes in a controlled environment. Unauthorized testing or exploitation is illegal and may lead to legal consequences.
